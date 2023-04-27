@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #0077B3">用户列表</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>邮箱</th>
+                <th>手机号</th>
+                <th>密码</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data_list %}
+                <tr>
+                    <td>{{item["id"]}}</td>
+                    <td>{{item["email"]}}</td>
+                    <td>{{item["phone"]}}</td>
+                    <td>{{item["pwd"]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登记</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F7F7F7;
+        background-image: url('https://openaicom.imgix.net/47e8bf4c-ffd5-4b80-b481-568ed1329f97/stangel-2022-1598.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=0%2C0%2C3840%2C2880&w=2000');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      form {
+        background-color: #FFF;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 0 auto;
+        width: 300px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        text-align: center;
+        color: #444;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #444;
+      }
+      input[type="text"],
+      input[type="password"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #CCC;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #00A0DF;
+        color: #FFF;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        margin-top: 16px;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type="submit"]:hover {
+        background-color: #0077B3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color:#0077B3;">GPT4.0登记</h1>
+    <form action="/input_data" method="post">
+      <label for="username">邮箱:</label>
+      <input type="text" id="username" name="username" placeholder="123456@qq.com" required><br><br>
+      <label for="iphone">手机号:</label>
+      <input type="text" id="iphone" name="iphone"  required><br><br>
+      <label for="password">密码:</label>
+      <input type="password" id="password" name="password"  required><br><br>
+      <input type="submit" value="登记">
+      {{msg}}
+    </form>
+  </body>
+</html>
