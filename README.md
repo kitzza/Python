@@ -1,2 +1,2 @@
-# Python
-学习Django和flask框架
+# python
+django学习
